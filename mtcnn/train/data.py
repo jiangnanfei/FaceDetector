@@ -45,7 +45,7 @@ def get_training_data(output_folder, suffix):
 
     # load from disk to menmory
     positive_meta = pd.read_csv(positive_meta_file)
-    pos = [os.path.join(part_dest, i) for i in positive_meta.iloc[:, 0]]
+    pos = [os.path.join(positive_dest, i) for i in positive_meta.iloc[:, 0]]
     pos_reg = np.array(positive_meta.iloc[:, 1:])
 
     part_meta = pd.read_csv(part_meta_file)
